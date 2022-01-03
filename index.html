@@ -25,11 +25,9 @@
   <source src="qq.mp3"  type="audio/mp3" />
 </audio> -->
 <video id="bgMusic1" style="display: none;" autoplay controls="" name="media">
-    <source src="http://qq-music-mp3.test.upcdn.net/fire.mp3" type="audio/mpeg">
+    <source src="https://yulong-1257061020.cos.ap-chengdu.myqcloud.com/music/fire.mp3" type="audio/mpeg">
 </video>
-<video id="bgMusic2" style="display: none;" controls="" name="media">
-    <source src="http://qq-music-mp3.test.upcdn.net/music/qq.mp3" type="audio/mpeg">
-</video>
+
 <div id="main">
   <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
   <div id="wrap">
@@ -124,13 +122,9 @@
 
         canvas.click(function (e) {
             var audio1 = document.getElementById("bgMusic1");
-            var audio2 = document.getElementById("bgMusic2");
             //播放(继续播放)
-            if(Math.random() > 0.5) {
-                audio1.play();
-            } else {
-                audio2.play();
-            }
+            audio1.play();
+      
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
